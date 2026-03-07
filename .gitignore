@@ -1,0 +1,16 @@
+# Android build outputs
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+
+# Large binary assets – download separately (see README)
+# ONNX models (already tracked via git-lfs or placed manually)
+# Stimulus images: 300 PNGs from https://zenodo.org/records/2647418
+app/src/main/assets/stimuli/
