@@ -27,6 +27,7 @@ This is a complete Android Studio project (Java) implementing your ASD vs TD scr
 2) Stimuli images (PNG):
    Place 300 images here:
    - app/src/main/assets/stimuli/0001.png ... 0300.png
+   - download from https://zenodo.org/records/2647418
 
 ## Notes
 
