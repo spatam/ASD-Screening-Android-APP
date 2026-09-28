@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_unict_background">#FFFFFFFF</color>
+    <color name="unict_orange">#FFF0643C</color>
+    <color name="branding_text_dark">#FF1A1A1A</color>
+
+    <string name="branding_university">University of Catania</string>
+    <string name="branding_department">Dipartimento di Matematica e Informatica</string>
+    <string name="branding_author">Author: Massimo Orazio Spata</string>
+    <string name="branding_logo_dmi_desc">UniCT DMI logo</string>
+    <string name="branding_logo_seal_desc">University of Catania seal</string>
+</resources>

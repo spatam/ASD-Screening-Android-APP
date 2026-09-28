@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Adaptive launcher icon: UniCT seal on white. <monochrome> = Android 13+ themed icon. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_unict_background" />
+    <foreground android:drawable="@mipmap/ic_launcher_unict_foreground" />
+    <monochrome android:drawable="@mipmap/ic_launcher_unict_foreground" />
+</adaptive-icon>
