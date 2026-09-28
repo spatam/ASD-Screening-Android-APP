@@ -11,7 +11,7 @@ This is a complete Android Studio project (Java) implementing your ASD vs TD scr
 - ONNX Runtime Mobile inference with 5-fold ensemble
 - Running average score displayed live
 
-![app_blur](https://github.com/user-attachments/assets/0a85ff0a-f409-4cf1-85a7-676168bf93e6)
+![app_blur](https://github.com/user-attachments/assets/image_app)
 
 ## Assets you must add
 
