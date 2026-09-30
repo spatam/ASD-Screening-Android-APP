@@ -103,9 +103,11 @@ The APKs contain no pictures, because the photos come from the MIT1003 collectio
 ```bash
 git clone https://github.com/spatam/ASD-Screening-Android-APP.git
 cd ASD-Screening-Android-APP
-./gradlew assembleDebug        # needs JDK 17+ and the Android SDK (or open the folder in Android Studio)
+./gradlew assembleDebug
 adb install app/build/outputs/apk/debug/app-arm64-v8a-debug.apk
 ```
+
+The build needs JDK 17 or newer and the Android SDK. Android Studio provides both and opens the folder as it is.
 
 `python scripts/fetch_saliency4asd.py --install-app-stimuli` copies the pictures into `app/src/main/assets/stimuli/`, and a build made after that skips the import step. Keep such builds to yourself, because they contain the photos.
 
@@ -113,7 +115,7 @@ adb install app/build/outputs/apk/debug/app-arm64-v8a-debug.apk
 
 ```bash
 pip install -e .
-python scripts/fetch_saliency4asd.py     # downloads and verifies Saliency4ASD into data/saliency4asd
+python scripts/fetch_saliency4asd.py     # into data/saliency4asd
 python examples/infer_onnx.py session --dataset data/saliency4asd --subject ASD_slot03 --images 40
 python examples/infer_onnx.py image --stimulus picture.png --fixations fixations.csv
 ```
@@ -123,7 +125,7 @@ The deployment models saw all 28 dataset children during training, so a session 
 ## Reproduce the paper
 
 ```bash
-pip install -r requirements.txt   # exact versions behind the released models (Python 3.11)
+pip install -r requirements.txt   # versions behind the released models
 python scripts/fetch_saliency4asd.py
 bash training_scripts/run_pipeline.sh --huiyu-dir data/saliency4asd --protocol subject_all
 ```
@@ -163,8 +165,8 @@ Run them as modules, for example `python -m analysis.analyze_image_budget --oof-
 **Parity with training.** [`asd_gaze/preprocessing.py`](asd_gaze/preprocessing.py) defines the model inputs, and [`Preprocessing.java`](app/src/main/java/it/unict/dmi/asdscreening/Preprocessing.java) and [`PilResize.java`](app/src/main/java/it/unict/dmi/asdscreening/PilResize.java) port it. [`scripts/make_parity_golden.py`](scripts/make_parity_golden.py) writes reference values from the Python side. The JVM tests then require the resize to match Pillow bit for bit and every model input to match within 2×10⁻⁴.
 
 ```bash
-./gradlew testDebugUnitTest   # Java: Pillow parity, model inputs, session score, fixation detector
-pytest                        # Python: protocol invariants, preprocessing, released models, ONNX export
+./gradlew testDebugUnitTest   # Java: parity with Python, scoring, fixations
+pytest                        # Python: protocols, preprocessing, models, export
 ```
 
 ## Repository layout
