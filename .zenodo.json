@@ -1,0 +1,40 @@
+{
+  "title": "ASD Screening Android App: code, models and app for on-device autism screening from gaze",
+  "upload_type": "software",
+  "description": "<p>Code, ONNX models and Android app for the paper <em>Protocol-Aware, On-Device Per-Image ASD Classification on Saliency4ASD via Multi-Stream Distillation</em> (IEEE Open Journal of the Computer Society, 2026). A two-stream teacher (frozen ViT-B/16 plus a temporal gaze encoder) is distilled into a 1.6M-parameter MobileNetV3 student. The student runs as a five-fold ONNX ensemble inside an offline Android app that estimates gaze from the front camera. The repository holds the training package, the three evaluation protocols, the analyses behind the paper's tables, the released models and a model card.</p><p>Research prototype. It is not a medical device and must not be used to diagnose or rule out autism.</p>",
+  "creators": [
+    {
+      "name": "Spata, Massimo Orazio",
+      "affiliation": "Department of Mathematics and Computer Science, University of Catania"
+    },
+    {
+      "name": "Casu, Mirko",
+      "affiliation": "Department of Mathematics and Computer Science, University of Catania"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "autism spectrum disorder",
+    "eye tracking",
+    "gaze",
+    "knowledge distillation",
+    "on-device machine learning",
+    "ONNX Runtime",
+    "Android",
+    "Saliency4ASD"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1109/OJCS.2026.3738736",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.2647418",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    }
+  ]
+}

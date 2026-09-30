@@ -191,7 +191,7 @@ docs/assets/            README artwork
 - **Training data:** Saliency4ASD by Duan et al. ([MMSys 2019](https://doi.org/10.1145/3304109.3325818), [Zenodo](https://zenodo.org/records/2647418), CC BY 4.0). Please cite it when you use the models.
 - **Stimuli:** the 300 pictures come from [MIT1003](https://doi.org/10.1109/ICCV.2009.5459462) (Judd et al., ICCV 2009). They are not part of this repository or of the APKs.
 - **Third-party software:** AndroidX and CameraX (Apache-2.0), ONNX Runtime (MIT), timm weights (Apache-2.0). The app also bundles Google ML Kit Face Mesh, which follows the [ML Kit terms](https://developers.google.com/ml-kit/terms) and is not open source.
-- **Trademarks:** the name and logos of the University of Catania belong to the University and are not covered by the license.
+- **Trademarks:** the names and logos of the University of Catania and of IPLab belong to their owners and are not covered by the license.
 
 ## Citation
 
@@ -219,3 +219,21 @@ If you use this code or the models, please cite the paper and the dataset. GitHu
 ## Contact
 
 Massimo Orazio Spata, corresponding author ([massimo.spata@unict.it](mailto:massimo.spata@unict.it)). Bug reports and questions are welcome in [Issues](https://github.com/spatam/ASD-Screening-Android-APP/issues). Changes are listed in [`CHANGELOG.md`](CHANGELOG.md), and [`CONTRIBUTING.md`](CONTRIBUTING.md) explains how to run the checks.
+
+<br>
+
+<p align="center">
+  <a href="https://www.unict.it/en"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-unict-dark.png">
+    <img alt="University of Catania" src="docs/assets/logo-unict-light.png" height="68">
+  </picture></a>
+  &emsp;&emsp;&emsp;
+  <a href="https://iplab.dmi.unict.it/"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-iplab-dark.png">
+    <img alt="Image Processing Laboratory (IPLab)" src="docs/assets/logo-iplab-light.png" height="68">
+  </picture></a>
+</p>
+
+<p align="center">
+  <sub>Developed at the <a href="https://www.dmi.unict.it/">Department of Mathematics and Computer Science</a> of the <a href="https://www.unict.it/en">University of Catania</a>, in collaboration with the <a href="https://iplab.dmi.unict.it/">Image Processing Laboratory (IPLab)</a>.</sub>
+</p>
