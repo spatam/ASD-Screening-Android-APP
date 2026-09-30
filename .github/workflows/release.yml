@@ -50,7 +50,9 @@ jobs:
         run: |
           apksigner="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)/apksigner"
           for apk in dist/*.apk; do "$apksigner" verify "$apk"; done
-          cert=$("$apksigner" verify --print-certs dist/*-arm64-v8a.apk | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
+          # The line starts with "Signer #1" or "V2 Signer:" depending on the build-tools version.
+          cert=$("$apksigner" verify --print-certs dist/*-arm64-v8a.apk | sed -n 's/.*certificate SHA-256 digest: //p' | head -1)
+          test -n "$cert"
           echo "CERT_SHA256=$cert" >> "$GITHUB_ENV"
 
       - name: Release notes from CHANGELOG.md
