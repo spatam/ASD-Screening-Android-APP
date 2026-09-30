@@ -8,8 +8,6 @@
 <p align="center">
   <a href="https://doi.org/10.1109/OJCS.2026.3738736"><img alt="Paper: IEEE OJCS 2026" src="https://img.shields.io/badge/paper-IEEE%20OJCS%202026-e8552e"></a>
   <a href="https://github.com/spatam/ASD-Screening-Android-APP/releases/latest"><img alt="Latest APK" src="https://img.shields.io/github/v/release/spatam/ASD-Screening-Android-APP?label=APK&color=2ea44f"></a>
-  <a href="https://github.com/spatam/ASD-Screening-Android-APP/actions/workflows/android.yml"><img alt="Android CI" src="https://github.com/spatam/ASD-Screening-Android-APP/actions/workflows/android.yml/badge.svg"></a>
-  <a href="https://github.com/spatam/ASD-Screening-Android-APP/actions/workflows/python.yml"><img alt="Python CI" src="https://github.com/spatam/ASD-Screening-Android-APP/actions/workflows/python.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue"></a>
   <a href="https://doi.org/10.5281/zenodo.2647418"><img alt="Data: Saliency4ASD" src="https://img.shields.io/badge/data-Saliency4ASD-6f42c1"></a>
 </p>
