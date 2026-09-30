@@ -49,7 +49,7 @@ jobs:
       - name: Signing certificate
         run: |
           apksigner="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)/apksigner"
-          "$apksigner" verify dist/*.apk
+          for apk in dist/*.apk; do "$apksigner" verify "$apk"; done
           cert=$("$apksigner" verify --print-certs dist/*-arm64-v8a.apk | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')
           echo "CERT_SHA256=$cert" >> "$GITHUB_ENV"
 
