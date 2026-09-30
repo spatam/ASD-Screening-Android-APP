@@ -1,16 +1,39 @@
-# Android build outputs
+# Android / Gradle
 .gradle/
+.kotlin/
 build/
 local.properties
-*.iml
-.idea/
 captures/
 .externalNativeBuild/
 .cxx/
 *.apk
 *.aab
+*.keystore
+*.jks
 
-# Large binary assets – download separately (see README)
-# ONNX models (already tracked via git-lfs or placed manually)
-# Stimulus images: 300 PNGs from https://zenodo.org/records/2647418
+# IDEs and OS files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv*/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Training outputs: checkpoints and run folders stay out of git
+runs/
+runs_*/
+*.pth
+*.pt
+*.ckpt
+
+# Datasets: download them with scripts/fetch_saliency4asd.py
+data/
+
+# Saliency4ASD stimuli. The photos come from MIT1003 and must not be redistributed.
 app/src/main/assets/stimuli/

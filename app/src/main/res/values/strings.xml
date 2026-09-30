@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stimulus_description">Stimulus picture</string>
+    <string name="status_ready">Ready</string>
+
+    <string name="disclaimer">Research prototype. It is not a medical device and must not be used to diagnose or rule out autism.</string>
+
+    <string name="stimuli_title">Stimuli needed</string>
+    <string name="stimuli_message">The test shows the 300 pictures of the Saliency4ASD dataset (Duan et al., 2019). They are not bundled with the app because the photos belong to their authors (MIT1003 collection).\n\n1. Download TrainingDataset.rar from Zenodo record 2647418.\n2. Extract it and copy the TrainingData/Images folder to this phone (or extract it here with an archive app).\n3. Tap Choose folder and select that Images folder.\n\nThe app checks every file against its known checksum and keeps a private copy.</string>
+    <string name="stimuli_choose">Choose folder</string>
+    <string name="stimuli_open_zenodo">Open Zenodo</string>
+    <string name="stimuli_close">Close</string>
+    <string name="stimuli_zenodo_url" translatable="false">https://zenodo.org/records/2647418</string>
+    <string name="stimuli_importing">Importing stimuli %1$d/%2$d…</string>
+    <string name="stimuli_done">All 300 stimuli verified.</string>
+    <string name="stimuli_incomplete_title">Import incomplete</string>
+    <string name="stimuli_incomplete_message">Verified: %1$d of 300\nMissing: %2$d\nRejected (checksum mismatch): %3$d\n\nPick the TrainingData/Images folder of the original Saliency4ASD archive.</string>
+    <string name="stimuli_retry">Try again</string>
+    <string name="stimuli_failed">Import failed: %1$s</string>
+</resources>

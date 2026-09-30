@@ -10,7 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="fitCenter"
-        android:contentDescription="stimulus"
+        android:contentDescription="@string/stimulus_description"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         android:layout_margin="10dp"/>
 
     <!-- Overlay drawn on top of cameraPreview: face box + probability + eye mesh -->
-    <com.example.asdscreening.FaceOverlayView
+    <it.unict.dmi.asdscreening.FaceOverlayView
         android:id="@+id/faceOverlay"
         android:layout_width="120dp"
         android:layout_height="160dp"
@@ -58,6 +58,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="#66000000"
-        android:text="Ready"/>
+        android:text="@string/status_ready"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
