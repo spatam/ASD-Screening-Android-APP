@@ -24,3 +24,23 @@ CI runs the same commands on every push.
 - Keep cross-validation grouped by child (`StratifiedGroupKFold` on subject groups). A child in both the training and the validation split of a fold inflates every metric.
 - Never commit data, stimuli, checkpoints or run folders. The `.gitignore` covers them. The Saliency4ASD pictures come from MIT1003 and cannot be redistributed.
 - New ONNX models need an entry in `models/SHA256SUMS` and in the model card.
+
+## Releasing
+
+1. Raise `versionCode` and `versionName` in `app/build.gradle`, `version` in `CITATION.cff` and `pyproject.toml`, and add a section to `CHANGELOG.md`.
+2. Tag and push: `git tag -a v1.2.3 -m "ASD Screening 1.2.3" && git push origin v1.2.3`. The Release workflow tests the app, builds one APK per CPU family and publishes them with the changelog section as release notes.
+
+The workflow signs the APKs with the key stored in four repository secrets. Without them it falls back to a throwaway debug key, and every release then needs a clean install. A repository admin creates the key once:
+
+```bash
+keytool -genkeypair -keystore release.jks -storetype PKCS12 -keyalg RSA -keysize 4096 \
+  -validity 10950 -alias asd-screening -dname "CN=ASD Screening, O=University of Catania, C=IT"
+base64 -i release.jks | gh secret set ASD_KEYSTORE_BASE64
+gh secret set ASD_KEYSTORE_PASSWORD
+gh secret set ASD_KEY_ALIAS --body asd-screening
+gh secret set ASD_KEY_PASSWORD   # same as the keystore password for PKCS12
+```
+
+Keep `release.jks` and its password somewhere safe and outside the repository. Android refuses to update an app signed with a different key.
+
+Connecting the repository to [Zenodo](https://zenodo.org/account/settings/github/) archives every release with a DOI; `.zenodo.json` already holds the metadata.
