@@ -13,7 +13,8 @@ def load(path):
 
 def test_parity_golden_file_is_up_to_date():
     golden = load(REPO / 'scripts' / 'make_parity_golden.py')
-    assert golden.GOLDEN.read_text() == golden.render(), 'run python scripts/make_parity_golden.py'
+    problems = golden.differences(golden.GOLDEN.read_text(), golden.render())
+    assert not problems, f'{problems}: run python scripts/make_parity_golden.py'
 
 
 def test_stimulus_manifest_lists_300_images():

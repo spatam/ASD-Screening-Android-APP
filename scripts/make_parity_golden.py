@@ -73,14 +73,68 @@ def render() -> str:
     return '\n'.join(lines) + '\n'
 
 
+def parse(text: str) -> dict:
+    """Golden file as numbers: resize digests, fixations, sequence, sum and sampled values."""
+    out: dict = {'digests': [], 'fixations': [], 'samples': {}}
+    lines = [line for line in text.splitlines() if line and not line.startswith('#')]
+    i = 0
+    while i < len(lines):
+        head, *rest = lines[i].split()
+        if head == 'image':
+            out['digests'].append((int(rest[0]), int(rest[1]), rest[2]))
+        elif head == 'fixations':
+            count = int(rest[0])
+            out['fixations'] = [tuple(map(float, lines[i + 1 + k].split())) for k in range(count)]
+            i += count
+        elif head == 'gaze_seq':
+            out['gaze_seq'] = np.array(rest, dtype=np.float64)
+        elif head == 'visual_sum':
+            out['visual_sum'] = float(rest[0])
+        elif head == 'visual_samples':
+            count = int(rest[0])
+            for k in range(count):
+                index, value = lines[i + 1 + k].split()
+                out['samples'][int(index)] = float(value)
+            i += count
+        i += 1
+    return out
+
+
+def differences(expected: str, actual: str) -> list[str]:
+    """Differences beyond floating-point noise between two renders of the golden file.
+
+    Resize digests must match exactly (integer arithmetic). The float values may differ in the
+    last digits across CPUs because SciPy's convolution is not bit-reproducible; the tolerances
+    stay far below the 2e-4 that the Java test allows.
+    """
+    a, b = parse(expected), parse(actual)
+    problems = []
+    if a['digests'] != b['digests']:
+        problems.append('resize digests differ')
+    if a['fixations'] != b['fixations']:
+        problems.append('fixtures differ')
+    if a['gaze_seq'].shape != b['gaze_seq'].shape or not np.allclose(a['gaze_seq'], b['gaze_seq'], atol=1e-6):
+        problems.append('gaze sequence differs')
+    if abs(a['visual_sum'] - b['visual_sum']) > 1e-2:
+        problems.append(f"visual sum differs: {a['visual_sum']} vs {b['visual_sum']}")
+    if a['samples'].keys() != b['samples'].keys():
+        problems.append('sampled indices differ')
+    else:
+        worst = max(abs(a['samples'][k] - b['samples'][k]) for k in a['samples'])
+        if worst > 1e-5:
+            problems.append(f'sampled values differ by up to {worst:.2e}')
+    return problems
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--check', action='store_true', help='fail if the golden file is out of date')
     args = parser.parse_args()
     text = render()
     if args.check:
-        if not GOLDEN.exists() or GOLDEN.read_text() != text:
-            sys.exit(f'{GOLDEN} is out of date: run python scripts/make_parity_golden.py')
+        problems = differences(GOLDEN.read_text(), text) if GOLDEN.exists() else ['file missing']
+        if problems:
+            sys.exit(f'{GOLDEN} is out of date ({"; ".join(problems)}): run python scripts/make_parity_golden.py')
         print(f'{GOLDEN} is up to date')
         return
     GOLDEN.write_text(text)
