@@ -1,0 +1,46 @@
+ASD Screening Android App
+Copyright 2026 Massimo Orazio Spata and Mirko Casu
+
+This product is released under the Apache License, Version 2.0 (see LICENSE).
+The license covers the source code, the build files and the ONNX models in
+this repository. Versions published before 2026-09-30 were released under
+CC0 1.0 and stay available under those terms.
+
+Paper
+  Spata, Casu, Rundo, Battiato. "Protocol-Aware, On-Device Per-Image ASD
+  Classification on Saliency4ASD via Multi-Stream Distillation."
+  IEEE Open Journal of the Computer Society, 2026.
+  https://doi.org/10.1109/OJCS.2026.3738736
+
+Training data
+  The ONNX models were trained on the Saliency4ASD dataset:
+  H. Duan, G. Zhai, X. Min, Z. Che, Y. Fang, X. Yang, J. Gutiérrez,
+  P. Le Callet. "A dataset of eye movements for the children with autism
+  spectrum disorder." ACM Multimedia Systems Conference (MMSys), 2019.
+  https://doi.org/10.1145/3304109.3325818
+  Zenodo record 2647418, released under CC BY 4.0.
+  Cite that paper when you use the models or the dataset.
+
+Stimuli
+  The 300 Saliency4ASD pictures come from the MIT1003 collection
+  (T. Judd, K. Ehinger, F. Durand, A. Torralba. "Learning to predict where
+  humans look." ICCV 2009, https://doi.org/10.1109/ICCV.2009.5459462).
+  Their copyright stays with the original photographers. This repository and
+  the published APKs do not contain them, and the Apache License does not
+  apply to them. Users download the pictures from Zenodo themselves.
+
+Pretrained weights
+  The teacher and student backbones start from ImageNet weights distributed
+  by timm (https://github.com/huggingface/pytorch-image-models, Apache-2.0).
+
+Third-party software in the Android app
+  AndroidX, CameraX and Material Components (Apache-2.0)
+  ONNX Runtime for Android (MIT, Microsoft Corporation)
+  Google ML Kit Face Mesh Detection, distributed under the ML Kit Terms of
+  Service (https://developers.google.com/ml-kit/terms). ML Kit is not open
+  source; its terms apply to the copy that ships inside the APK.
+
+Trademarks
+  The name and logos of the University of Catania and of its Department of
+  Mathematics and Computer Science belong to the University. The Apache
+  License grants no rights to use them (section 6).

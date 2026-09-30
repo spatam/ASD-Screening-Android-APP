@@ -1,0 +1,38 @@
+name: Bug report
+description: Something in the app or in the training code does not work
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Android app
+        - Training or evaluation (Python)
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "Phone model and Android version, or OS, Python and PyTorch versions"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: adb logcat output or the Python traceback
+      render: shell

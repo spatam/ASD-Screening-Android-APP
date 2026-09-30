@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Paper (IEEE Open Journal of the Computer Society)
+    url: https://doi.org/10.1109/OJCS.2026.3738736
+    about: Method, protocols and results in detail
+  - name: Saliency4ASD dataset (Zenodo)
+    url: https://zenodo.org/records/2647418
+    about: Download page and license of the training data

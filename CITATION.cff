@@ -1,0 +1,71 @@
+cff-version: 1.2.0
+message: "If you use this software or its models, please cite the paper below and the Saliency4ASD dataset."
+title: "ASD Screening Android App"
+abstract: >-
+  On-device screening for autism spectrum disorder from a child's gaze on single pictures.
+  A two-stream teacher (frozen ViT-B/16 plus a temporal gaze encoder) is distilled into a
+  1.6M-parameter MobileNetV3 student that runs as an ONNX ensemble inside an Android app.
+type: software
+authors:
+  - family-names: Spata
+    given-names: Massimo Orazio
+    email: massimo.spata@unict.it
+    affiliation: "Department of Mathematics and Computer Science, University of Catania"
+  - family-names: Casu
+    given-names: Mirko
+    affiliation: "Department of Mathematics and Computer Science, University of Catania"
+repository-code: "https://github.com/spatam/ASD-Screening-Android-APP"
+url: "https://doi.org/10.1109/OJCS.2026.3738736"
+license: Apache-2.0
+version: 1.0.0
+date-released: "2026-09-30"
+keywords:
+  - autism spectrum disorder
+  - eye tracking
+  - gaze
+  - knowledge distillation
+  - on-device machine learning
+  - ONNX Runtime
+  - Android
+  - Saliency4ASD
+preferred-citation:
+  type: article
+  title: "Protocol-Aware, On-Device Per-Image ASD Classification on Saliency4ASD via Multi-Stream Distillation"
+  authors:
+    - family-names: Spata
+      given-names: Massimo Orazio
+    - family-names: Casu
+      given-names: Mirko
+    - family-names: Rundo
+      given-names: Francesco
+    - family-names: Battiato
+      given-names: Sebastiano
+  journal: "IEEE Open Journal of the Computer Society"
+  year: 2026
+  start: 1
+  end: 12
+  doi: "10.1109/OJCS.2026.3738736"
+  url: "https://ieeexplore.ieee.org/document/11715963"
+references:
+  - type: conference-paper
+    title: "A dataset of eye movements for the children with autism spectrum disorder"
+    authors:
+      - family-names: Duan
+        given-names: Huiyu
+      - family-names: Zhai
+        given-names: Guangtao
+      - family-names: Min
+        given-names: Xiongkuo
+      - family-names: Che
+        given-names: Zhaohui
+      - family-names: Fang
+        given-names: Yi
+      - family-names: Yang
+        given-names: Xiaokang
+      - family-names: Gutiérrez
+        given-names: Jesús
+      - family-names: Le Callet
+        given-names: Patrick
+    collection-title: "Proceedings of the 10th ACM Multimedia Systems Conference"
+    year: 2019
+    doi: "10.1145/3304109.3325818"
