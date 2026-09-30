@@ -30,7 +30,7 @@ CI runs the same commands on every push.
 1. Raise `versionCode` and `versionName` in `app/build.gradle`, `version` in `CITATION.cff` and `pyproject.toml`, and add a section to `CHANGELOG.md`.
 2. Tag and push: `git tag -a v1.2.3 -m "ASD Screening 1.2.3" && git push origin v1.2.3`. The Release workflow tests the app, builds one APK per CPU family and publishes them with the changelog section as release notes.
 
-The workflow signs the APKs with the key stored in four repository secrets. Without them it falls back to a throwaway debug key, and every release then needs a clean install. A repository admin creates the key once:
+The workflow signs the APKs with the key stored in four repository secrets. Without them it falls back to a throwaway debug key, and every release then needs a clean install. A maintainer with write access creates the key once:
 
 ```bash
 keytool -genkeypair -keystore release.jks -storetype PKCS12 -keyalg RSA -keysize 4096 \
