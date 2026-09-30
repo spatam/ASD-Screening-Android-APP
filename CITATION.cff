@@ -17,7 +17,7 @@ authors:
 repository-code: "https://github.com/spatam/ASD-Screening-Android-APP"
 url: "https://doi.org/10.1109/OJCS.2026.3738736"
 license: Apache-2.0
-version: 1.0.0
+version: 1.0.1
 date-released: "2026-09-30"
 keywords:
   - autism spectrum disorder

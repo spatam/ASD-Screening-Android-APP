@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "asd-gaze"
-version = "1.0.0"
+version = "1.0.1"
 description = "Training, evaluation and ONNX export for on-device ASD screening from gaze (Saliency4ASD)."
 readme = "README.md"
 license = "Apache-2.0"

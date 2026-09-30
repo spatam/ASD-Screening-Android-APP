@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented here. Versions follow [Semantic Versioning](https://semver.org).
 
+## [1.0.1] - 2026-09-30
+
+### App
+
+- The APKs are signed with the project's release key. Its certificate has the SHA-256 digest `45d9fac7aef32ba847982ff331ff6cad5f3b259ecd32b4d83fc3d129ba986039`, and every release lists it. Version 1.0.0 carried a temporary key that Android will not update, so uninstall 1.0.0 once before installing 1.0.1. Later versions update in place.
+
+### Documentation
+
+- README artwork drawn with text outlines, so the labels keep their layout in every browser.
+- University of Catania and IPLab logos in the README footer.
+- Zenodo metadata (`.zenodo.json`) and a release guide in `CONTRIBUTING.md`.
+
 ## [1.0.0] - 2026-09-30
 
 First public release, published with the paper in the IEEE Open Journal of the Computer Society ([10.1109/OJCS.2026.3738736](https://doi.org/10.1109/OJCS.2026.3738736)).
