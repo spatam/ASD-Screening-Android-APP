@@ -24,7 +24,8 @@ jobs:
           cache: pip
       - name: Install (CPU build of PyTorch)
         run: |
-          pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+          # timm imports torchvision, which must come from the same CPU index as torch.
+          pip install torch==2.10.0 torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cpu
           pip install -r requirements.txt pytest ruff
       - name: Lint
         run: ruff check .

@@ -1,6 +1,7 @@
 # Exact versions of the environment that trained and exported the released deployment models
 # (Python 3.11). For a newer compatible setup, use: pip install -e .
 torch==2.10.0
+torchvision==0.25.0
 timm==1.0.26
 numpy==2.4.3
 scipy==1.17.1
