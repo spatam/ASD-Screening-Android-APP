@@ -6,7 +6,7 @@ Trains TwoStreamTeacher on Huiyu 2019 per-image records under a
 
 Usage
 -----
-    python scripts/train_phase1.py \
+    python training_scripts/train_phase1.py \
         --huiyu-dir huiyu_2019_eye_movements \
         --output-dir runs \
         --run-tag phase1_v1

@@ -7,7 +7,7 @@ Runs OOF evaluation across all phases and writes two CSV files:
 
 Usage
 -----
-    python scripts/evaluate.py \
+    python training_scripts/evaluate.py \
         --huiyu-dir huiyu_2019_eye_movements \
         --runs-dir runs \
         --phase1-tag phase1_v1 \
@@ -17,7 +17,9 @@ Usage
 Thin wrapper around ``asd_gaze.compute_full_metrics``.
 """
 
-import subprocess, sys, argparse
+import subprocess
+import sys
+import argparse
 
 
 def main() -> None:

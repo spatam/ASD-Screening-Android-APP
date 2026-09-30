@@ -6,7 +6,7 @@ StudentASD model via soft-label KD (temperature scaling).
 
 Usage
 -----
-    python scripts/train_phase3.py \
+    python training_scripts/train_phase3.py \
         --huiyu-dir huiyu_2019_eye_movements \
         --phase2-runs-dir runs \
         --phase2-tag phase2_v1 \
@@ -16,7 +16,9 @@ Usage
 Thin wrapper around ``asd_gaze.train_distill``.
 """
 
-import subprocess, sys, argparse
+import subprocess
+import sys
+import argparse
 
 
 def main() -> None:

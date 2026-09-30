@@ -6,7 +6,7 @@ one to ONNX (opset 18) for on-device inference.
 
 Usage
 -----
-    python scripts/export_onnx.py \
+    python training_scripts/export_onnx.py \
         --phase3-runs-dir runs \
         --phase3-tag distill_v1 \
         --output-dir runs/onnx
@@ -14,7 +14,9 @@ Usage
 Thin wrapper around ``asd_gaze.export_onnx``.
 """
 
-import subprocess, sys, argparse
+import subprocess
+import sys
+import argparse
 
 
 def main() -> None:

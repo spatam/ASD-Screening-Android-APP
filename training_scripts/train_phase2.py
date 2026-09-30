@@ -6,7 +6,7 @@ label smoothing, and mixup augmentation.
 
 Usage
 -----
-    python scripts/train_phase2.py \
+    python training_scripts/train_phase2.py \
         --huiyu-dir huiyu_2019_eye_movements \
         --phase1-runs-dir runs \
         --phase1-tag phase1_v1 \
@@ -16,7 +16,9 @@ Usage
 Thin wrapper around ``asd_gaze.train_phase3``.
 """
 
-import subprocess, sys, argparse
+import subprocess
+import sys
+import argparse
 
 
 def main() -> None:
