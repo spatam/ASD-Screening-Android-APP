@@ -223,17 +223,9 @@ Massimo Orazio Spata, corresponding author ([massimo.spata@unict.it](mailto:mass
 <br>
 
 <p align="center">
-  <a href="https://www.unict.it/en"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-unict-dark.png">
-    <img alt="University of Catania" src="docs/assets/logo-unict-light.png" height="68">
-  </picture></a>
-  &emsp;&emsp;&emsp;
-  <a href="https://iplab.dmi.unict.it/"><picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-iplab-dark.png">
-    <img alt="Image Processing Laboratory (IPLab)" src="docs/assets/logo-iplab-light.png" height="68">
-  </picture></a>
+  <a href="https://www.unict.it/en"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-unict-dark.png"><img alt="University of Catania" src="docs/assets/logo-unict-light.png" height="68"></picture></a>&emsp;&emsp;&emsp;<a href="https://iplab.dmi.unict.it/"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-iplab-dark.png"><img alt="Image Processing Laboratory (IPLab)" src="docs/assets/logo-iplab-light.png" height="68"></picture></a>
 </p>
 
 <p align="center">
-  <sub>Developed at the <a href="https://www.dmi.unict.it/">Department of Mathematics and Computer Science</a> of the <a href="https://www.unict.it/en">University of Catania</a>, in collaboration with the <a href="https://iplab.dmi.unict.it/">Image Processing Laboratory (IPLab)</a>.</sub>
+  <sub>Developed within the <a href="https://iplab.dmi.unict.it/">Image Processing Laboratory</a> at the <a href="https://www.dmi.unict.it/">Department of Mathematics and Computer Science</a> of the <a href="https://www.unict.it/en">University of Catania</a>.</sub>
 </p>
